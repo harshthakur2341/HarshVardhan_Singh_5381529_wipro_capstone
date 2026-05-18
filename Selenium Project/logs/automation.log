@@ -1,0 +1,173 @@
+2026-05-18 15:14:18 - INFO - root - ==================================================
+2026-05-18 15:14:18 - INFO - root - Starting test!!
+2026-05-18 15:19:10 - INFO - root - ==================================================
+2026-05-18 15:19:10 - INFO - root - Starting test!!
+2026-05-18 15:19:11 - INFO - WDM - ====== WebDriver manager ======
+2026-05-18 15:19:16 - INFO - WDM - Driver [C:\Users\harsh\.wdm\drivers\edgedriver\win64\148.0.3967.70\msedgedriver.exe] found in cache by browser version
+2026-05-18 15:19:19 - INFO - root - Opened browser: edge
+2026-05-18 15:20:23 - INFO - root - URL loaded: https://www.makemytrip.com/
+2026-05-18 15:20:26 - INFO - root - Click on the train Icon
+2026-05-18 15:20:28 - INFO - root - Clicking on Book Ticket
+2026-05-18 15:20:28 - INFO - root - Reading train data from excel
+2026-05-18 15:21:37 - INFO - root - Closing browser: edge
+2026-05-18 15:21:37 - INFO - root - ENDING TEST
+2026-05-18 15:21:37 - INFO - root - ==================================================
+2026-05-18 15:25:02 - INFO - root - ==================================================
+2026-05-18 15:25:02 - INFO - root - Starting test!!
+2026-05-18 15:25:02 - INFO - WDM - ====== WebDriver manager ======
+2026-05-18 15:25:03 - INFO - WDM - Driver [C:\Users\harsh\.wdm\drivers\edgedriver\win64\148.0.3967.70\msedgedriver.exe] found in cache by browser version
+2026-05-18 15:25:07 - INFO - root - Opened browser: edge
+2026-05-18 15:25:10 - INFO - root - URL loaded: https://www.makemytrip.com/
+2026-05-18 15:25:10 - INFO - root - Click on the train Icon
+2026-05-18 15:25:37 - INFO - root - Closing browser: edge
+2026-05-18 15:25:37 - INFO - root - ENDING TEST
+2026-05-18 15:25:37 - INFO - root - ==================================================
+2026-05-18 15:33:26 - INFO - root - ==================================================
+2026-05-18 15:33:26 - INFO - root - Starting test!!
+2026-05-18 15:33:27 - INFO - WDM - ====== WebDriver manager ======
+2026-05-18 15:33:28 - INFO - WDM - Driver [C:\Users\harsh\.wdm\drivers\edgedriver\win64\148.0.3967.70\msedgedriver.exe] found in cache by browser version
+2026-05-18 15:33:31 - INFO - root - Opened browser: edge
+2026-05-18 15:33:53 - INFO - root - URL loaded: https://www.makemytrip.com/
+2026-05-18 15:33:53 - INFO - root - Click on the train Icon
+2026-05-18 15:33:58 - INFO - root - Clicking on Book Ticket
+2026-05-18 15:33:59 - INFO - root - Reading train data from excel
+2026-05-18 15:34:08 - INFO - root - Searching Train: New Delhi -> Ayodhya
+2026-05-18 15:34:08 - INFO - root - Clicking on search button
+2026-05-18 15:34:22 - INFO - root - Closing browser: edge
+2026-05-18 15:34:22 - INFO - root - ENDING TEST
+2026-05-18 15:34:22 - INFO - root - ==================================================
+2026-05-18 16:25:33 - INFO - root - ==================================================
+2026-05-18 16:25:33 - INFO - root - Starting test!!
+2026-05-18 16:25:33 - INFO - WDM - ====== WebDriver manager ======
+2026-05-18 16:25:35 - INFO - WDM - Driver [C:\Users\harsh\.wdm\drivers\edgedriver\win64\148.0.3967.70\msedgedriver.exe] found in cache by browser version
+2026-05-18 16:25:38 - INFO - root - Opened browser: edge
+2026-05-18 16:25:55 - INFO - root - URL loaded: https://www.makemytrip.com/
+2026-05-18 16:25:56 - INFO - root - STARTING TRAIN SEARCH TEST
+2026-05-18 16:25:56 - INFO - root - Click on the train Icon
+2026-05-18 16:26:37 - INFO - root - Closing browser: edge
+2026-05-18 16:26:38 - INFO - root - ENDING TEST
+2026-05-18 16:26:38 - INFO - root - ==================================================
+2026-05-18 16:29:39 - INFO - root - ==================================================
+2026-05-18 16:29:39 - INFO - root - Starting test!!
+2026-05-18 16:29:39 - INFO - root - Reading 
+2026-05-18 16:29:44 - INFO - root - Opened browser: edge
+2026-05-18 16:29:45 - INFO - root - Url loaded: https://www.makemytrip.com/
+2026-05-18 16:29:45 - INFO - root - STARTING TRAIN SEARCH TEST
+2026-05-18 16:29:45 - INFO - root - Click on the train Icon
+2026-05-18 16:29:50 - INFO - root - Closing browser: edge
+2026-05-18 16:29:50 - INFO - root - ENDING TEST
+2026-05-18 16:29:50 - INFO - root - ================================================
+2026-05-18 16:33:15 - INFO - root - ==================================================
+2026-05-18 16:33:15 - INFO - root - Starting test!!
+2026-05-18 16:33:15 - INFO - WDM - ====== WebDriver manager ======
+2026-05-18 16:33:17 - INFO - WDM - Driver [C:\Users\harsh\.wdm\drivers\edgedriver\win64\148.0.3967.70\msedgedriver.exe] found in cache by browser version
+2026-05-18 16:33:19 - INFO - root - Opened browser: edge
+2026-05-18 16:33:21 - INFO - root - URL loaded: https://www.makemytrip.com/
+2026-05-18 16:33:21 - INFO - root - STARTING TRAIN SEARCH TEST
+2026-05-18 16:33:21 - INFO - root - Click on the train Icon
+2026-05-18 16:33:26 - INFO - root - Closing browser: edge
+2026-05-18 16:33:26 - INFO - root - ENDING TEST
+2026-05-18 16:33:26 - INFO - root - ==================================================
+2026-05-18 16:46:14 - INFO - root - ==================================================
+2026-05-18 16:46:14 - INFO - root - Starting test!!
+2026-05-18 16:46:14 - INFO - WDM - ====== WebDriver manager ======
+2026-05-18 16:46:15 - INFO - WDM - Driver [C:\Users\harsh\.wdm\drivers\edgedriver\win64\148.0.3967.70\msedgedriver.exe] found in cache by browser version
+2026-05-18 16:46:18 - INFO - root - Opened browser: edge
+2026-05-18 16:46:30 - INFO - root - URL loaded: https://www.makemytrip.com/
+2026-05-18 16:46:33 - INFO - root - STARTING TRAIN SEARCH TEST
+2026-05-18 16:46:33 - INFO - root - Click on the train Icon
+2026-05-18 16:46:38 - INFO - root - Clicking on Book Ticket
+2026-05-18 16:46:38 - INFO - root - Reading train data from excel
+2026-05-18 16:46:52 - INFO - root - Closing browser: edge
+2026-05-18 16:46:52 - INFO - root - ENDING TEST
+2026-05-18 16:46:52 - INFO - root - ==================================================
+2026-05-18 16:56:19 - INFO - root - ==================================================
+2026-05-18 16:56:19 - INFO - root - Starting test!!
+2026-05-18 16:56:20 - INFO - WDM - ====== WebDriver manager ======
+2026-05-18 16:56:21 - INFO - WDM - Driver [C:\Users\harsh\.wdm\drivers\edgedriver\win64\148.0.3967.70\msedgedriver.exe] found in cache by browser version
+2026-05-18 16:56:24 - INFO - root - Opened browser: edge
+2026-05-18 16:56:35 - INFO - root - URL loaded: https://www.makemytrip.com/
+2026-05-18 16:56:35 - INFO - root - STARTING TRAIN SEARCH TEST
+2026-05-18 16:56:35 - INFO - root - Click on the train Icon
+2026-05-18 16:56:40 - INFO - root - Clicking on Book Ticket
+2026-05-18 16:56:41 - INFO - root - Reading train data from excel
+2026-05-18 16:57:14 - INFO - root - Closing browser: edge
+2026-05-18 16:57:14 - INFO - root - ENDING TEST
+2026-05-18 16:57:14 - INFO - root - ==================================================
+2026-05-18 17:13:35 - INFO - root - ==================================================
+2026-05-18 17:13:35 - INFO - root - Starting test!!
+2026-05-18 17:13:35 - INFO - WDM - ====== WebDriver manager ======
+2026-05-18 17:13:36 - INFO - WDM - Driver [C:\Users\harsh\.wdm\drivers\edgedriver\win64\148.0.3967.70\msedgedriver.exe] found in cache by browser version
+2026-05-18 17:13:38 - INFO - root - Opened browser: edge
+2026-05-18 17:13:52 - INFO - root - URL loaded: https://www.makemytrip.com/
+2026-05-18 17:13:52 - INFO - root - STARTING TRAIN SEARCH TEST
+2026-05-18 17:13:52 - INFO - root - Click on the train Icon
+2026-05-18 17:14:26 - INFO - root - Closing browser: edge
+2026-05-18 17:14:26 - INFO - root - ENDING TEST
+2026-05-18 17:14:26 - INFO - root - ==================================================
+2026-05-18 17:27:24 - INFO - root - ==================================================
+2026-05-18 17:27:24 - INFO - root - Starting test!!
+2026-05-18 17:27:24 - INFO - WDM - ====== WebDriver manager ======
+2026-05-18 17:27:26 - INFO - WDM - Driver [C:\Users\harsh\.wdm\drivers\edgedriver\win64\148.0.3967.70\msedgedriver.exe] found in cache by browser version
+2026-05-18 17:27:30 - INFO - root - Opened browser: edge
+2026-05-18 17:27:42 - INFO - root - URL loaded: https://www.makemytrip.com/
+2026-05-18 17:27:42 - INFO - root - STARTING TRAIN SEARCH TEST
+2026-05-18 17:27:42 - INFO - root - Click on the train Icon
+2026-05-18 17:27:43 - INFO - root - Clicking on Book Ticket
+2026-05-18 17:27:51 - INFO - root - Closing browser: edge
+2026-05-18 17:27:51 - INFO - root - ENDING TEST
+2026-05-18 17:27:51 - INFO - root - ==================================================
+2026-05-18 17:36:06 - INFO - root - ==================================================
+2026-05-18 17:36:06 - INFO - root - Starting test!!
+2026-05-18 17:36:06 - INFO - root - Reading 
+2026-05-18 17:36:12 - INFO - root - Opened browser: edge
+2026-05-18 17:36:13 - INFO - root - Url loaded: https://www.makemytrip.com/
+2026-05-18 17:36:13 - INFO - root - STARTING TRAIN SEARCH TEST
+2026-05-18 17:36:13 - INFO - root - Click on the train Icon
+2026-05-18 17:36:16 - INFO - root - Closing browser: edge
+2026-05-18 17:36:16 - INFO - root - ENDING TEST
+2026-05-18 17:36:16 - INFO - root - ================================================
+2026-05-18 17:38:12 - INFO - root - ==================================================
+2026-05-18 17:38:12 - INFO - root - Starting test!!
+2026-05-18 17:38:13 - INFO - WDM - ====== WebDriver manager ======
+2026-05-18 17:38:14 - INFO - WDM - Driver [C:\Users\harsh\.wdm\drivers\edgedriver\win64\148.0.3967.70\msedgedriver.exe] found in cache by browser version
+2026-05-18 17:38:23 - INFO - root - Opened browser: edge
+2026-05-18 17:38:31 - INFO - root - URL loaded: https://www.makemytrip.com/
+2026-05-18 17:38:31 - INFO - root - STARTING TRAIN SEARCH TEST
+2026-05-18 17:38:31 - INFO - root - Click on the train Icon
+2026-05-18 17:38:47 - INFO - root - Clicking on Book Ticket
+2026-05-18 17:39:11 - INFO - root - Closing browser: edge
+2026-05-18 17:39:11 - INFO - root - ENDING TEST
+2026-05-18 17:39:11 - INFO - root - ==================================================
+2026-05-18 22:15:40 - INFO - root - ==================================================
+2026-05-18 22:15:40 - INFO - root - Starting test!!
+2026-05-18 22:15:41 - INFO - WDM - ====== WebDriver manager ======
+2026-05-18 22:15:42 - INFO - WDM - Driver [C:\Users\harsh\.wdm\drivers\edgedriver\win64\148.0.3967.70\msedgedriver.exe] found in cache by browser version
+2026-05-18 22:15:45 - INFO - root - Opened browser: edge
+2026-05-18 22:15:53 - INFO - root - URL loaded: https://www.makemytrip.com/
+2026-05-18 22:15:53 - INFO - root - STARTING TRAIN SEARCH TEST
+2026-05-18 22:15:53 - INFO - root - Click on the train Icon
+2026-05-18 22:16:00 - INFO - root - Clicking on Book Ticket
+2026-05-18 22:16:23 - INFO - root - Closing browser: edge
+2026-05-18 22:16:23 - INFO - root - ENDING TEST
+2026-05-18 22:16:23 - INFO - root - ==================================================
+2026-05-18 22:51:33 - INFO - root - ==================================================
+2026-05-18 22:51:33 - INFO - root - Starting test!!
+2026-05-18 22:51:33 - INFO - WDM - ====== WebDriver manager ======
+2026-05-18 22:51:34 - INFO - WDM - Driver [C:\Users\harsh\.wdm\drivers\edgedriver\win64\148.0.3967.70\msedgedriver.exe] found in cache by browser version
+2026-05-18 22:51:37 - INFO - root - Opened browser: edge
+2026-05-18 22:51:46 - INFO - root - URL loaded: https://www.makemytrip.com/
+2026-05-18 22:52:20 - INFO - root - Closing browser: edge
+2026-05-18 22:52:20 - INFO - root - ENDING TEST
+2026-05-18 22:52:20 - INFO - root - ==================================================
+2026-05-18 23:01:27 - INFO - root - ==================================================
+2026-05-18 23:01:27 - INFO - root - Starting test!!
+2026-05-18 23:01:27 - INFO - WDM - ====== WebDriver manager ======
+2026-05-18 23:01:27 - INFO - WDM - Driver [C:\Users\harsh\.wdm\drivers\edgedriver\win64\148.0.3967.70\msedgedriver.exe] found in cache by browser version
+2026-05-18 23:01:30 - INFO - root - Opened browser: edge
+2026-05-18 23:01:31 - INFO - root - URL loaded: https://www.makemytrip.com/
+2026-05-18 23:01:44 - INFO - root - Closing browser: edge
+2026-05-18 23:01:44 - INFO - root - ENDING TEST
+2026-05-18 23:01:44 - INFO - root - ==================================================
+2026-05-18 23:04:18 - INFO - root - ==================================================
+c
