@@ -10,7 +10,7 @@ class ScreenshotUtil:
 
     @staticmethod
     def capture_screenshot(driver, screenshot_name="screenshot"):
-        screenshot_dir = "reports"
+        screenshot_dir = "reports/screenshots"
         if not os.path.exists(screenshot_dir):
             os.makedirs(screenshot_dir)
 

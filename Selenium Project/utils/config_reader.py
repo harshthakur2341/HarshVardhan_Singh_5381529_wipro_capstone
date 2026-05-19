@@ -1,4 +1,4 @@
-import os
+'''import os
 
 
 class ConfigReader:
@@ -23,4 +23,19 @@ class ConfigReader:
 
     @classmethod
     def get(cls, key):
-        return cls.load_config().get(key)
+        return cls.load_config().get(key)'''
+import configparser
+
+
+class ConfigReader:
+
+    config = configparser.ConfigParser()
+
+    config.read(
+        "config/config.properties"
+    )
+
+    @classmethod
+    def get(cls, key):
+
+        return cls.config["DEFAULT"][key]

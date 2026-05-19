@@ -3,3 +3,4 @@ webdriver-manager
 pytest
 Allure-pytest
 openpyxl
+pytest-html

@@ -1,0 +1,2 @@
+from_station,to_station,Passenger_Name,Passenger_Age,Passenger_Gender,Email,Mobile_Number,IRCTC_ID,CARD_NUMBER,EXPIRY,CVV,CARD_HOLDER
+Delhi,Ayodhya,Harsh Vardhan,28,Male,harsh@example.com,9876543210,harsh_irctc,4111111111111111,12/28,123,Harsh Vardhan
