@@ -1,0 +1,8 @@
+"DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
+"","52413","TS_03: Verify Train Filters Functionality","tests","2026-05-21","passed","2026-05-21","","test_positivecases","",""
+"","108147","TS_04: Verify Successful Navigation to Payment Page","tests","2026-05-21","passed","2026-05-21","","test_positivecases","",""
+"","158407","test_complete_train_search_flow[booking0]","tests","2026-05-21","passed","2026-05-21","","test_end2end","",""
+"","65812","NS_02: Verify Invalid Mobile Field Form Validation","tests","2026-05-21","passed","2026-05-21","","test_negativecases","",""
+"","48874","TS_01: Verify Train Search Functionality","tests","2026-05-21","passed","2026-05-21","","test_positivecases","",""
+"","43584","TS_02: Validate Train Listing Display","tests","2026-05-21","passed","2026-05-21","","test_positivecases","",""
+"","39335","NS_01: Validate Invalid Station Search Error Handling","tests","2026-05-21","passed","2026-05-21","","test_negativecases","",""

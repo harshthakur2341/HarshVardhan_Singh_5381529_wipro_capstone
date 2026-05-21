@@ -1,6 +1,0 @@
-[32mINFO    [0m root:test_positivecases.py:47 STARTING TS_02: Validating listing page for Delhi -> Ayodhya
-[32mINFO    [0m root:home_page.py:300 STARTING TRAIN SEARCH
-[32mINFO    [0m root:home_page.py:58 CLICKED OUTSIDE POPUP
-[32mINFO    [0m root:home_page.py:312 FROM STATION: Delhi
-[32mINFO    [0m root:home_page.py:116 CLICKED FIELD: Delhi
-[32mINFO    [0m root:home_page.py:143 TYPED STATION: Delhi

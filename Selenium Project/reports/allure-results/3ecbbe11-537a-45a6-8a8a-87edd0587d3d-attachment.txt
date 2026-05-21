@@ -1,3 +1,0 @@
-INFO     root:conftest.py:180 Closing Browser
-INFO     root:conftest.py:186 Ending Test
-INFO     root:conftest.py:190 =======================================

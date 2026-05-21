@@ -1,0 +1,92 @@
+INFO     root:conftest.py:58 =======================================
+INFO     root:conftest.py:62 Starting Test
+INFO     root:conftest.py:64 Browser : chrome
+INFO     root:conftest.py:68 Base URL : https://www.makemytrip.com/railways/
+INFO     root:conftest.py:72 Implicit Wait : 5
+INFO     root:conftest.py:76 Timeout : 10
+INFO     root:conftest.py:80 Headless : False
+INFO     WDM:logger.py:11 ====== WebDriver manager ======
+INFO     WDM:logger.py:11 Driver [C:\Users\harsh\.wdm\drivers\chromedriver\win64\148.0.7778.178\chromedriver-win64/chromedriver.exe] found in cache by browser version
+INFO     root:conftest.py:174 Opening URL : https://www.makemytrip.com/railways/
+INFO     root:test_end2end.py:26 STARTING TRAIN SEARCH FLOW FOR: Delhi TO Lucknow
+INFO     root:home_page.py:300 STARTING TRAIN SEARCH
+INFO     root:home_page.py:41 LOGIN POPUP CLOSED
+INFO     root:home_page.py:312 FROM STATION: Delhi
+INFO     root:home_page.py:116 CLICKED FIELD: Delhi
+INFO     root:home_page.py:143 TYPED STATION: Delhi
+INFO     root:home_page.py:163 SELECTED STATION: Delhi
+INFO     root:home_page.py:321 TO STATION: Lucknow
+INFO     root:home_page.py:116 CLICKED FIELD: Lucknow
+INFO     root:home_page.py:143 TYPED STATION: Lucknow
+INFO     root:home_page.py:163 SELECTED STATION: Lucknow
+INFO     root:home_page.py:187 DATE BOX CLICKED
+INFO     root:home_page.py:207 30 MAY 2026 DATE SELECTED
+INFO     root:home_page.py:270 CLICKING SEARCH BUTTON
+INFO     root:home_page.py:292 SEARCH BUTTON CLICKED
+INFO     root:home_page.py:334 TRAIN SEARCH COMPLETED
+INFO     root:test_end2end.py:31 TRAIN SEARCH COMPLETED FROM HOME PAGE
+INFO     root:screenshot_util.py:25 Screenshot saved at: reports/screenshots/1_After_Homepage_Search_20260521_152236.png
+INFO     root:train_page.py:24 POM LOG: VERIFYING TRAIN SEARCH RESULTS PAGE
+INFO     root:train_page.py:32 POM LOG: TRAIN SEARCH RESULTS CONTAINER VALIDATED
+INFO     root:train_page.py:35 POM LOG: APPLYING AC FILTER
+INFO     root:train_page.py:44 POM LOG: AC FILTER DEPLOYED NATIVELY
+INFO     root:train_page.py:54 POM LOG: APPLYING AVAILABILITY FILTER
+INFO     root:train_page.py:63 POM LOG: AVAILABILITY FILTER DEPLOYED NATIVELY
+INFO     root:screenshot_util.py:25 Screenshot saved at: reports/screenshots/2_After_Applying_Filters_20260521_152247.png
+INFO     root:train_page.py:73 POM LOG: SELECTING FIRST AVAILABLE TRAIN SEAT OPTION
+INFO     root:train_page.py:84 POM LOG: VERIFYING TARGET ELEMENT TEXT ---> 'Available 552'
+INFO     root:train_page.py:93 POM LOG: NATIVE CLICK SENT TO AVAILABILITY TEXT ELEMENT
+INFO     root:test_end2end.py:43 TRAIN SPECIFIC RUN SELECTION CAPTURED SUCCESSFULLY
+INFO     root:screenshot_util.py:25 Screenshot saved at: reports/screenshots/3_After_Seat_Selection_20260521_152257.png
+INFO     root:passenger_page.py:29 POM LOG: TARGETING CANCELLATION PROTECTION RADIO BUTTON
+INFO     root:passenger_page.py:37 POM LOG: CANCELLATION SELECTION SUCCESSFULLY COMPLETED
+INFO     root:passenger_page.py:43 POM LOG: DISPATCHING CLICK INTERACTION TO ADD TRAVELLER LINK
+INFO     root:passenger_page.py:51 POM LOG: ADD TRAVELLER POPUP MODAL INSTANTIATED SUCCESSFULLY
+INFO     root:passenger_page.py:57 POM LOG: FILLING MODAL -> NAME: Harsh, AGE: 25, GENDER: Male
+INFO     root:passenger_page.py:91 POM LOG: TRAVELLER SUBMITTED SUCCESSFULLY
+INFO     root:test_end2end.py:61 TRAVELLER POPULATED SUCCESSFULLY VIA EXCEL
+INFO     root:passenger_page.py:97 POM LOG: FILLING CONTACT DETAILS -> EMAIL: example@test.com, MOBILE: 9876543210
+INFO     root:passenger_page.py:109 POM LOG: CONTACT DETAILS POPULATED SUCCESSFULLY
+INFO     root:test_end2end.py:68 CONTACT DETAILS POPULATED SUCCESSFULLY
+INFO     root:screenshot_util.py:25 Screenshot saved at: reports/screenshots/4_After_Passenger_Details_20260521_152310.png
+INFO     root:passenger_page.py:115 POM LOG: INITIATING IRCTC USERNAME OVERLAY SELECTION FOR: abhinavy918
+INFO     root:passenger_page.py:128 POM LOG: Modal not detected. Forcing click on IRCTC trigger via JavaScript.
+INFO     root:passenger_page.py:146 POM LOG: Clicking explicitly inside the IRCTC username popup input field.
+INFO     root:passenger_page.py:158 POM LOG: IRCTC ID TYPED SUCCESSFULLY INTO ACTIVE MODAL INPUT LAYER
+INFO     root:passenger_page.py:179 POM LOG: IRCTC ID SUBMITTED VIA MODAL EXECUTION
+INFO     root:test_end2end.py:73 END-TO-END FLOW RUN COMPLETED SUCCESSFULLY
+INFO     root:screenshot_util.py:25 Screenshot saved at: reports/screenshots/5_After_IRCTC_Entry_20260521_152329.png
+INFO     root:passenger_page.py:186 POM LOG: Targeting the mandatory confirmation checkbox wrapper.
+INFO     root:passenger_page.py:202 POM LOG: Mandatory checkbox successfully marked.
+INFO     root:test_end2end.py:78 MANDATORY ACKNOWLEDGEMENT CHECKBOX CONFIRMED AND SUCCESSFUL
+INFO     root:passenger_page.py:210 POM LOG: Targeting the 'PAY & BOOK NOW' button anchor link.
+INFO     root:passenger_page.py:225 POM LOG: 'PAY & BOOK NOW' action dispatched successfully.
+INFO     root:test_end2end.py:81 PAY AND BOOK NOW BUTTON SELECTION COMPLETED SUCCESSFULLY
+INFO     root:screenshot_util.py:25 Screenshot saved at: reports/screenshots/6_After_Clicking_Pay_And_Book_20260521_152331.png
+INFO     root:payment_page.py:31 POM LOG: LOCATING CREDIT/DEBIT CARD PAYMENT TAB
+INFO     root:payment_page.py:46 POM LOG: CREDIT/DEBIT CARD TAB SELECTED SUCCESSFULLY
+INFO     root:payment_page.py:54 POM LOG: INITIALIZING CARD DETAILS INJECTION
+ERROR    root:payment_page.py:124 POM LOG: FAULT OCCURRED WHILE INJECTING CARD DATA: Message: 
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff7290f7de5+14895]
+	chromedriver!GetHandleVerifier [0x7ff7290f7e50+14900]
+	chromedriver!(No symbol) [0x7ff728e5d5ad]
+	chromedriver!(No symbol) [0x7ff728eb7822]
+	chromedriver!(No symbol) [0x7ff728eb7b2c]
+	chromedriver!(No symbol) [0x7ff728f07d17]
+	chromedriver!(No symbol) [0x7ff728f0486f]
+	chromedriver!(No symbol) [0x7ff728ea9df8]
+	chromedriver!(No symbol) [0x7ff728eaace3]
+	chromedriver!GetHandleVerifier [0x7ff72940cc49+3296f9]
+	chromedriver!GetHandleVerifier [0x7ff729407375+323e25]
+	chromedriver!GetHandleVerifier [0x7ff72942bc82+348732]
+	chromedriver!GetHandleVerifier [0x7ff729116045+32af5]
+	chromedriver!GetHandleVerifier [0x7ff72911ecec+3b79c]
+	chromedriver!GetHandleVerifier [0x7ff729101bc4+1e674]
+	chromedriver!GetHandleVerifier [0x7ff729101d54+1e804]
+	chromedriver!GetHandleVerifier [0x7ff7290e60e7+2b97]
+	KERNEL32!BaseThreadInitThunk [0x7ffd6531e957+17]
+	ntdll!RtlUserThreadStart [0x7ffd6750427c+2c]
+INFO     root:conftest.py:182 Closing Browser
+INFO     root:conftest.py:188 Ending Test
+INFO     root:conftest.py:192 =======================================

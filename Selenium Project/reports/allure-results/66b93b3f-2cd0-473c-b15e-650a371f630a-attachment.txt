@@ -1,9 +1,0 @@
-[32mINFO    [0m root:test_negativecases.py:50 STARTING NS_02: Supplying invalid phone format block to verify inline alert tracking.
-[32mINFO    [0m root:home_page.py:300 STARTING TRAIN SEARCH
-[32mINFO    [0m root:home_page.py:58 CLICKED OUTSIDE POPUP
-[32mINFO    [0m root:home_page.py:312 FROM STATION: Delhi
-[32mINFO    [0m root:home_page.py:116 CLICKED FIELD: Delhi
-[32mINFO    [0m root:home_page.py:143 TYPED STATION: Delhi
-[32mINFO    [0m root:conftest.py:180 Closing Browser
-[32mINFO    [0m root:conftest.py:186 Ending Test
-[32mINFO    [0m root:conftest.py:190 =======================================

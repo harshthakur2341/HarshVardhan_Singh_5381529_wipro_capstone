@@ -11,15 +11,8 @@ from utils.screenshot_util import ScreenshotUtil  # <-- Imported your utility
 
 logger = LogGen.loggen()
 
-# --- DATA INGESTION: MERGE BOTH EXCEL SHEETS ---
-search_data = ExcelReader.read_excel("data/test_data.xlsx", "TrainBookingData")
-passenger_data = ExcelReader.read_excel("data/test_data.xlsx", "test_data")
-
-combined_train_data = []
-for search_row, passenger_row in zip(search_data, passenger_data):
-    merged_row = {**search_row, **passenger_row}
-    combined_train_data.append(merged_row)
-
+# --- ONLY ADD THIS LINE ---
+combined_train_data = ExcelReader.read_excel("data/test_data.xlsx", "TrainBookingData")
 
 def attach_screenshot_to_allure(driver, name):
     """Helper method to capture and attach screenshots to Allure reports."""

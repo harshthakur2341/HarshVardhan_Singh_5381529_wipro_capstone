@@ -1,0 +1,10 @@
+selenium
+seleniumbase
+behave
+webdriver-manager
+allure-behave
+pytest
+openpyxl
+configparser
+gherkin-official
+#allure

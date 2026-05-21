@@ -10,22 +10,19 @@ from utils.screenshot_util import ScreenshotUtil
 
 logger = LogGen.loggen()
 
-# Load negative test cases from CSV data configuration layer
-negative_cases = CSVReader.read_csv("data/negative_data.csv")
-
+# --- Load and Pre-Filter Datasets cleanly at runtime ---
+raw_negative_cases = CSVReader.read_csv("data/negative_data.csv")
+invalid_station_cases = [row for row in raw_negative_cases if row.get("scenario_type") == "invalid_station"]
+invalid_phone_cases = [row for row in raw_negative_cases if row.get("scenario_type") == "invalid_phone"]
 
 def capture_and_attach(driver, step_name):
-    """Helper utility to save screenshots locally and pass them to Allure reports."""
     path = ScreenshotUtil.capture_screenshot(driver, step_name)
     allure.attach.file(path, name=step_name, attachment_type=AttachmentType.PNG)
 
 
-@pytest.mark.parametrize("failed_booking", negative_cases)
+@pytest.mark.parametrize("failed_booking", invalid_station_cases) # Focuses only on invalid station rows
 @allure.title("NS_01: Validate Invalid Station Search Error Handling")
 def test_invalid_station_search_behavior(driver, failed_booking):
-    if failed_booking.get("scenario_type") != "invalid_station":
-        pytest.skip("Skipping non-matching validation scenario row.")
-
     home = HomePage(driver)
     logger.info(f"STARTING NS_01: Submitting invalid station input -> {failed_booking['from_station']}")
 
@@ -33,23 +30,17 @@ def test_invalid_station_search_behavior(driver, failed_booking):
 
     logger.info("COMPLETED NS_01: Negative station search error state screenshotted.")
     capture_and_attach(driver, "Negative_Invalid_Station_View")
-
-    # Assert that system catches error or fails to navigate into a valid listings path
     assert "view" not in driver.current_url.lower(), "Negative Test Failed: Entered listing flow with garbage data!"
 
 
-@pytest.mark.parametrize("failed_booking", negative_cases)
+@pytest.mark.parametrize("failed_booking", invalid_phone_cases) # Focuses only on invalid phone rows
 @allure.title("NS_02: Verify Invalid Mobile Field Form Validation")
 def test_invalid_mobile_number_validation(driver, failed_booking):
-    if failed_booking.get("scenario_type") != "invalid_phone":
-        pytest.skip("Skipping non-matching validation scenario row.")
-
     home = HomePage(driver)
     train_page = TrainPage(driver)
     passenger_page = PassengerPage(driver)
     logger.info("STARTING NS_02: Supplying invalid phone format block to verify inline alert tracking.")
 
-    # Navigate downstream to passenger page field layers
     home.search_train(failed_booking["from_station"], failed_booking["to_station"])
     train_page.verify_train_search_result()
     train_page.select_first_available_train_ticket()
@@ -71,6 +62,4 @@ def test_invalid_mobile_number_validation(driver, failed_booking):
 
     logger.info("COMPLETED NS_02: Error boundary tooltips caught successfully.")
     capture_and_attach(driver, "Negative_Malformed_Phone_State")
-
-    # Assert that system successfully blocked checkout navigation because of bad inputs
     assert "payment" not in driver.current_url.lower(), "Negative Test Failed: Navigated to payment page using invalid phone string!"
