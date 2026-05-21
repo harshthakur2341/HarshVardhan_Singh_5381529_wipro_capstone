@@ -1,3 +1,5 @@
+import os
+
 import pytest
 from selenium import webdriver
 
@@ -190,3 +192,7 @@ def driver():
     logger.info(
         "======================================="
     )
+
+def pytest_unconfigure(config):
+    print("\n=====TESTS COMPLETED - OPENING ALLURE REPORT======")
+    os.system("Allure serve reports/allure-results")

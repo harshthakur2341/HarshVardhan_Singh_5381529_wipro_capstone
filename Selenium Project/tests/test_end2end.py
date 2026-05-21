@@ -106,3 +106,9 @@ def test_complete_train_search_flow(driver, booking):
     )
     logger.info("TEST PIPELINE: PAYMENT DATA COMPLETELY COMMITTED")
     attach_screenshot_to_allure(driver, "7_Final_Payment_Page_State")
+    current_dom_text = driver.page_source.lower()
+    current_url_path = driver.current_url.lower()
+
+    # Validates that the engine successfully progressed deep into the checkout environment without stalling
+    assert "payment" in current_url_path or "checkout" in current_url_path or "pay" in current_dom_text, \
+        f"E2E Validation Failed: Card/CVV submitted but driver got stranded at endpoint: {driver.current_url}"

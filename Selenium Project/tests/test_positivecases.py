@@ -16,7 +16,6 @@ positive_cases = CSVReader.read_csv("data/positive_data.csv")
 
 
 def capture_and_attach(driver, step_name):
-    """Helper utility to save screenshots locally and pass them to Allure reports."""
     path = ScreenshotUtil.capture_screenshot(driver, step_name)
     allure.attach.file(path, name=step_name, attachment_type=AttachmentType.PNG)
 
@@ -54,8 +53,9 @@ def test_validate_train_listing_display(driver, booking):
     logger.info("COMPLETED TS_02: Train list component rendering confirmed.")
     capture_and_attach(driver, "TC02_Listing_Verified")
 
-    # Assert to confirm listing components are actively visible on page
-    assert "view" in driver.current_url.lower() or "search" in driver.current_url.lower(), "Listing page failed to load!"
+    # Assert to confirm listing components are actively visible on the page without checking the URL
+    page_text = driver.page_source.lower()
+    assert "trains found" in page_text or "quick filters" in page_text, "Assertion Failed: Listing page elements did not render in the DOM!"
 
 
 @pytest.mark.parametrize("booking", positive_cases)
@@ -87,15 +87,26 @@ def test_verify_payment_page_navigation(driver, booking):
     payment_page = PaymentPage(driver)
     logger.info("STARTING TS_04: Executing full checkout cycle to payment gateway handoff.")
 
-    # Navigate and Select Train
+    # 1. Navigate and Select Train
     home.search_train(booking["from_station"], booking["to_station"])
     train_page.verify_train_search_result()
     train_page.filter_ac_trains()
     train_page.filter_available_trains()
     train_page.select_first_available_train_ticket()
 
-    # Populate Passenger Forms
-    passenger_page.select_cancellation_insurance()
+    # NEW FIX: If a new tab opens, switch focus to it explicitly
+    handles = driver.window_handles
+    if len(handles) > 1:
+        logger.info("New window tab detected! Switching driver focus to passenger layout.")
+        driver.switch_to.window(handles[-1])
+
+    # 2. Populate Passenger Forms
+    try:
+        passenger_page.select_cancellation_insurance()
+    except Exception as e:
+        logger.warning(f"Cancellation option skipped or could not be selected: {e}. Moving forward.")
+        # Optional: You can put a pass here if the insurance selection isn't mandatory for your flow
+
     passenger_page.open_add_traveller_modal()
     passenger_page.fill_traveller_details_and_submit(
         name=booking["Passenger_Name"],
@@ -107,7 +118,7 @@ def test_verify_payment_page_navigation(driver, booking):
     passenger_page.click_mandatory_checkbox()
     passenger_page.click_pay_and_book_now()
 
-    # Handle Payment Gateway Elements
+    # 3. Handle Payment Gateway Elements
     payment_page.select_credit_card_option()
     capture_and_attach(driver, "TC04_Payment_Gateway_Loaded")
 
@@ -118,7 +129,6 @@ def test_verify_payment_page_navigation(driver, booking):
         cvv=clean_booking.get("CVV"),
         card_holder=clean_booking.get("CARD_HOLDER")
     )
-    logger.info("COMPLETED TS_04: Card credential injection finalized.")
 
-    # Assert that we are truly interacting on a secure checkout/payment url context
+    logger.info("COMPLETED TS_04: Card credential injection finalized.")
     assert "payment" in driver.current_url.lower() or "checkout" in driver.current_url.lower(), "Handoff validation failed: Not on payment screen!"

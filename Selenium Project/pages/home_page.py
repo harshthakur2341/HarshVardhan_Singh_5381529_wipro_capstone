@@ -293,7 +293,7 @@ class HomePage:
             "SEARCH BUTTON CLICKED"
         )
 
-        time.sleep(10)
+        time.sleep(5)
 
     def search_train(self, from_station, to_station):
 

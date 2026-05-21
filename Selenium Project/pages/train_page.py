@@ -9,7 +9,7 @@ logger = LogGen.loggen()
 
 
 class TrainPage(BasePage):
-    # CORE DOM COMPONENT LOCATORS
+
     TRAIN_RESULTS_HEADER = (By.XPATH, "//*[contains(text(), 'trains found')]")
 
     # FILTER LOCATORS
@@ -113,3 +113,4 @@ class TrainPage(BasePage):
 
     def apply_available_filter(self):
         self.filter_available_trains()
+

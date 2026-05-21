@@ -1,0 +1,28 @@
+INFO     root:conftest.py:56 =======================================
+INFO     root:conftest.py:60 Starting Test
+INFO     root:conftest.py:62 Browser : chrome
+INFO     root:conftest.py:66 Base URL : https://www.makemytrip.com/railways/
+INFO     root:conftest.py:70 Implicit Wait : 5
+INFO     root:conftest.py:74 Timeout : 10
+INFO     root:conftest.py:78 Headless : False
+INFO     WDM:logger.py:11 ====== WebDriver manager ======
+INFO     WDM:logger.py:11 Driver [C:\Users\harsh\.wdm\drivers\chromedriver\win64\148.0.7778.167\chromedriver-win64/chromedriver.exe] found in cache by browser version
+INFO     root:conftest.py:172 Opening URL : https://www.makemytrip.com/railways/
+INFO     root:test_negativecases.py:30 STARTING NS_01: Submitting invalid station input -> XYZ_FAKE_STATION
+INFO     root:home_page.py:300 STARTING TRAIN SEARCH
+INFO     root:home_page.py:41 LOGIN POPUP CLOSED
+INFO     root:home_page.py:312 FROM STATION: XYZ_FAKE_STATION
+INFO     root:home_page.py:116 CLICKED FIELD: XYZ_FAKE_STATION
+INFO     root:home_page.py:143 TYPED STATION: XYZ_FAKE_STATION
+INFO     root:home_page.py:163 SELECTED STATION: XYZ_FAKE_STATION
+INFO     root:home_page.py:321 TO STATION: Mumbai
+INFO     root:home_page.py:116 CLICKED FIELD: Mumbai
+INFO     root:home_page.py:143 TYPED STATION: Mumbai
+INFO     root:home_page.py:163 SELECTED STATION: Mumbai
+INFO     root:home_page.py:187 DATE BOX CLICKED
+INFO     root:home_page.py:207 30 MAY 2026 DATE SELECTED
+INFO     root:home_page.py:270 CLICKING SEARCH BUTTON
+INFO     root:home_page.py:292 SEARCH BUTTON CLICKED
+INFO     root:home_page.py:334 TRAIN SEARCH COMPLETED
+INFO     root:test_negativecases.py:34 COMPLETED NS_01: Negative station search error state screenshotted.
+INFO     root:screenshot_util.py:25 Screenshot saved at: reports/screenshots/Negative_Invalid_Station_View_20260520_002337.png

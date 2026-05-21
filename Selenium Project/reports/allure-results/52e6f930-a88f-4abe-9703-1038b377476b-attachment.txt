@@ -1,0 +1,79 @@
+[32mINFO    [0m root:conftest.py:58 =======================================
+[32mINFO    [0m root:conftest.py:62 Starting Test
+[32mINFO    [0m root:conftest.py:64 Browser : chrome
+[32mINFO    [0m root:conftest.py:68 Base URL : https://www.makemytrip.com/railways/
+[32mINFO    [0m root:conftest.py:72 Implicit Wait : 5
+[32mINFO    [0m root:conftest.py:76 Timeout : 10
+[32mINFO    [0m root:conftest.py:80 Headless : False
+[32mINFO    [0m WDM:logger.py:11 ====== WebDriver manager ======
+[32mINFO    [0m WDM:logger.py:11 Driver [C:\Users\harsh\.wdm\drivers\chromedriver\win64\148.0.7778.167\chromedriver-win64/chromedriver.exe] found in cache by browser version
+[32mINFO    [0m root:conftest.py:174 Opening URL : https://www.makemytrip.com/railways/
+[32mINFO    [0m root:test_end2end.py:33 STARTING TRAIN SEARCH FLOW FOR: Delhi TO Lucknow
+[32mINFO    [0m root:home_page.py:300 STARTING TRAIN SEARCH
+[32mINFO    [0m root:home_page.py:41 LOGIN POPUP CLOSED
+[32mINFO    [0m root:home_page.py:312 FROM STATION: Delhi
+[32mINFO    [0m root:home_page.py:116 CLICKED FIELD: Delhi
+[32mINFO    [0m root:home_page.py:143 TYPED STATION: Delhi
+[32mINFO    [0m root:home_page.py:163 SELECTED STATION: Delhi
+[32mINFO    [0m root:home_page.py:321 TO STATION: Lucknow
+[32mINFO    [0m root:home_page.py:116 CLICKED FIELD: Lucknow
+[32mINFO    [0m root:home_page.py:143 TYPED STATION: Lucknow
+[32mINFO    [0m root:home_page.py:163 SELECTED STATION: Lucknow
+[32mINFO    [0m root:home_page.py:187 DATE BOX CLICKED
+[32mINFO    [0m root:home_page.py:207 30 MAY 2026 DATE SELECTED
+[32mINFO    [0m root:home_page.py:270 CLICKING SEARCH BUTTON
+[32mINFO    [0m root:home_page.py:292 SEARCH BUTTON CLICKED
+[32mINFO    [0m root:home_page.py:334 TRAIN SEARCH COMPLETED
+[32mINFO    [0m root:test_end2end.py:38 TRAIN SEARCH COMPLETED FROM HOME PAGE
+[32mINFO    [0m root:screenshot_util.py:25 Screenshot saved at: reports/screenshots/1_After_Homepage_Search_20260520_151507.png
+[32mINFO    [0m root:train_page.py:24 POM LOG: VERIFYING TRAIN SEARCH RESULTS PAGE
+[32mINFO    [0m root:train_page.py:32 POM LOG: TRAIN SEARCH RESULTS CONTAINER VALIDATED
+[32mINFO    [0m root:train_page.py:35 POM LOG: APPLYING AC FILTER
+[32mINFO    [0m root:train_page.py:44 POM LOG: AC FILTER DEPLOYED NATIVELY
+[32mINFO    [0m root:train_page.py:54 POM LOG: APPLYING AVAILABILITY FILTER
+[32mINFO    [0m root:train_page.py:63 POM LOG: AVAILABILITY FILTER DEPLOYED NATIVELY
+[32mINFO    [0m root:screenshot_util.py:25 Screenshot saved at: reports/screenshots/2_After_Applying_Filters_20260520_151518.png
+[32mINFO    [0m root:train_page.py:73 POM LOG: SELECTING FIRST AVAILABLE TRAIN SEAT OPTION
+[32mINFO    [0m root:train_page.py:84 POM LOG: VERIFYING TARGET ELEMENT TEXT ---> 'Available 626'
+[32mINFO    [0m root:train_page.py:93 POM LOG: NATIVE CLICK SENT TO AVAILABILITY TEXT ELEMENT
+[32mINFO    [0m root:test_end2end.py:50 TRAIN SPECIFIC RUN SELECTION CAPTURED SUCCESSFULLY
+[32mINFO    [0m root:screenshot_util.py:25 Screenshot saved at: reports/screenshots/3_After_Seat_Selection_20260520_151528.png
+[32mINFO    [0m root:passenger_page.py:29 POM LOG: TARGETING CANCELLATION PROTECTION RADIO BUTTON
+[32mINFO    [0m root:passenger_page.py:37 POM LOG: CANCELLATION SELECTION SUCCESSFULLY COMPLETED
+[32mINFO    [0m root:passenger_page.py:43 POM LOG: DISPATCHING CLICK INTERACTION TO ADD TRAVELLER LINK
+[32mINFO    [0m root:passenger_page.py:51 POM LOG: ADD TRAVELLER POPUP MODAL INSTANTIATED SUCCESSFULLY
+[32mINFO    [0m root:passenger_page.py:57 POM LOG: FILLING MODAL -> NAME: Harsh, AGE: 25, GENDER: Male
+[32mINFO    [0m root:passenger_page.py:91 POM LOG: TRAVELLER SUBMITTED SUCCESSFULLY
+[32mINFO    [0m root:test_end2end.py:68 TRAVELLER POPULATED SUCCESSFULLY VIA EXCEL
+[32mINFO    [0m root:passenger_page.py:97 POM LOG: FILLING CONTACT DETAILS -> EMAIL: example@test.com, MOBILE: 9876543210
+[32mINFO    [0m root:passenger_page.py:109 POM LOG: CONTACT DETAILS POPULATED SUCCESSFULLY
+[32mINFO    [0m root:test_end2end.py:75 CONTACT DETAILS POPULATED SUCCESSFULLY
+[32mINFO    [0m root:screenshot_util.py:25 Screenshot saved at: reports/screenshots/4_After_Passenger_Details_20260520_151542.png
+[32mINFO    [0m root:passenger_page.py:115 POM LOG: INITIATING IRCTC USERNAME OVERLAY SELECTION FOR: abhinavy918
+[32mINFO    [0m root:passenger_page.py:128 POM LOG: Modal not detected. Forcing click on IRCTC trigger via JavaScript.
+[32mINFO    [0m root:passenger_page.py:146 POM LOG: Clicking explicitly inside the IRCTC username popup input field.
+[32mINFO    [0m root:passenger_page.py:158 POM LOG: IRCTC ID TYPED SUCCESSFULLY INTO ACTIVE MODAL INPUT LAYER
+[32mINFO    [0m root:passenger_page.py:179 POM LOG: IRCTC ID SUBMITTED VIA MODAL EXECUTION
+[32mINFO    [0m root:test_end2end.py:80 END-TO-END FLOW RUN COMPLETED SUCCESSFULLY
+[32mINFO    [0m root:screenshot_util.py:25 Screenshot saved at: reports/screenshots/5_After_IRCTC_Entry_20260520_151559.png
+[32mINFO    [0m root:passenger_page.py:186 POM LOG: Targeting the mandatory confirmation checkbox wrapper.
+[32mINFO    [0m root:passenger_page.py:202 POM LOG: Mandatory checkbox successfully marked.
+[32mINFO    [0m root:test_end2end.py:85 MANDATORY ACKNOWLEDGEMENT CHECKBOX CONFIRMED AND SUCCESSFUL
+[32mINFO    [0m root:passenger_page.py:210 POM LOG: Targeting the 'PAY & BOOK NOW' button anchor link.
+[32mINFO    [0m root:passenger_page.py:225 POM LOG: 'PAY & BOOK NOW' action dispatched successfully.
+[32mINFO    [0m root:test_end2end.py:88 PAY AND BOOK NOW BUTTON SELECTION COMPLETED SUCCESSFULLY
+[32mINFO    [0m root:screenshot_util.py:25 Screenshot saved at: reports/screenshots/6_After_Clicking_Pay_And_Book_20260520_151602.png
+[32mINFO    [0m root:payment_page.py:31 POM LOG: LOCATING CREDIT/DEBIT CARD PAYMENT TAB
+[32mINFO    [0m root:payment_page.py:46 POM LOG: CREDIT/DEBIT CARD TAB SELECTED SUCCESSFULLY
+[32mINFO    [0m root:payment_page.py:54 POM LOG: INITIALIZING CARD DETAILS INJECTION
+[32mINFO    [0m root:payment_page.py:64 POM LOG: CARD NUMBER COMMITTED
+[32mINFO    [0m root:payment_page.py:84 POM LOG: EXPIRY MONTH COMMITTED -> 12
+[32mINFO    [0m root:payment_page.py:99 POM LOG: EXPIRY YEAR COMMITTED -> 28
+[32mINFO    [0m root:payment_page.py:107 POM LOG: CVV COMMITTED
+[32mINFO    [0m root:payment_page.py:115 POM LOG: CARD HOLDER NAME COMMITTED
+[32mINFO    [0m root:payment_page.py:120 POM LOG: ALL DUMMY PAYMENT DETAILS INJECTED SUCCESSFULLY. END OF E2E FLOW REACHED.
+[32mINFO    [0m root:test_end2end.py:107 TEST PIPELINE: PAYMENT DATA COMPLETELY COMMITTED
+[32mINFO    [0m root:screenshot_util.py:25 Screenshot saved at: reports/screenshots/7_Final_Payment_Page_State_20260520_151622.png
+[32mINFO    [0m root:conftest.py:182 Closing Browser
+[32mINFO    [0m root:conftest.py:188 Ending Test
+[32mINFO    [0m root:conftest.py:192 =======================================

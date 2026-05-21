@@ -1,0 +1,36 @@
+INFO     root:test_negativecases.py:50 STARTING NS_02: Supplying invalid phone format block to verify inline alert tracking.
+INFO     root:home_page.py:300 STARTING TRAIN SEARCH
+INFO     root:home_page.py:41 LOGIN POPUP CLOSED
+INFO     root:home_page.py:312 FROM STATION: Delhi
+INFO     root:home_page.py:116 CLICKED FIELD: Delhi
+INFO     root:home_page.py:143 TYPED STATION: Delhi
+INFO     root:home_page.py:163 SELECTED STATION: Delhi
+INFO     root:home_page.py:321 TO STATION: Ayodhya
+INFO     root:home_page.py:116 CLICKED FIELD: Ayodhya
+INFO     root:home_page.py:143 TYPED STATION: Ayodhya
+INFO     root:home_page.py:163 SELECTED STATION: Ayodhya
+INFO     root:home_page.py:187 DATE BOX CLICKED
+INFO     root:home_page.py:207 30 MAY 2026 DATE SELECTED
+INFO     root:home_page.py:270 CLICKING SEARCH BUTTON
+INFO     root:home_page.py:292 SEARCH BUTTON CLICKED
+INFO     root:home_page.py:334 TRAIN SEARCH COMPLETED
+INFO     root:train_page.py:24 POM LOG: VERIFYING TRAIN SEARCH RESULTS PAGE
+INFO     root:train_page.py:32 POM LOG: TRAIN SEARCH RESULTS CONTAINER VALIDATED
+INFO     root:train_page.py:73 POM LOG: SELECTING FIRST AVAILABLE TRAIN SEAT OPTION
+INFO     root:train_page.py:84 POM LOG: VERIFYING TARGET ELEMENT TEXT ---> 'Available 437'
+INFO     root:train_page.py:93 POM LOG: NATIVE CLICK SENT TO AVAILABILITY TEXT ELEMENT
+INFO     root:passenger_page.py:29 POM LOG: TARGETING CANCELLATION PROTECTION RADIO BUTTON
+INFO     root:passenger_page.py:37 POM LOG: CANCELLATION SELECTION SUCCESSFULLY COMPLETED
+INFO     root:passenger_page.py:43 POM LOG: DISPATCHING CLICK INTERACTION TO ADD TRAVELLER LINK
+INFO     root:passenger_page.py:51 POM LOG: ADD TRAVELLER POPUP MODAL INSTANTIATED SUCCESSFULLY
+INFO     root:passenger_page.py:57 POM LOG: FILLING MODAL -> NAME: Harsh Vardhan, AGE: 28, GENDER: Male
+INFO     root:passenger_page.py:91 POM LOG: TRAVELLER SUBMITTED SUCCESSFULLY
+INFO     root:passenger_page.py:97 POM LOG: FILLING CONTACT DETAILS -> EMAIL: harsh@example.com, MOBILE: 12345
+INFO     root:passenger_page.py:109 POM LOG: CONTACT DETAILS POPULATED SUCCESSFULLY
+INFO     root:passenger_page.py:210 POM LOG: Targeting the 'PAY & BOOK NOW' button anchor link.
+INFO     root:passenger_page.py:225 POM LOG: 'PAY & BOOK NOW' action dispatched successfully.
+INFO     root:test_negativecases.py:72 COMPLETED NS_02: Error boundary tooltips caught successfully.
+INFO     root:screenshot_util.py:25 Screenshot saved at: reports/screenshots/Negative_Malformed_Phone_State_20260520_004749.png
+INFO     root:conftest.py:180 Closing Browser
+INFO     root:conftest.py:186 Ending Test
+INFO     root:conftest.py:190 =======================================

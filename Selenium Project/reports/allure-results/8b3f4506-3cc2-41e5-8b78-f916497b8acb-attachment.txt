@@ -1,0 +1,4 @@
+[32mINFO    [0m root:test_positivecases.py:66 STARTING TS_03: Triggering class and availability checkbox modifications.
+[32mINFO    [0m root:home_page.py:300 STARTING TRAIN SEARCH
+[32mINFO    [0m root:home_page.py:66 NO POPUP FOUND
+[32mINFO    [0m root:home_page.py:312 FROM STATION: Delhi
