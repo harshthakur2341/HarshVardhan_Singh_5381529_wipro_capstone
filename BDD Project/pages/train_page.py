@@ -59,7 +59,7 @@ class TrainPage(BasePage):
         logger.info("POM LOG: Parsing layout map structures to intercept first available active inventory card element")
         try:
             time.sleep(3)
-            btn = WebDriverWait(self.driver, 25).until(
+            btn = WebDriverWait(self.driver, 35).until(
                 EC.presence_of_element_located(TrainLocators.FIRST_AVAILABLE_TRAIN_BTN))
             element_text = btn.text or btn.get_attribute("innerText")
             logger.info(

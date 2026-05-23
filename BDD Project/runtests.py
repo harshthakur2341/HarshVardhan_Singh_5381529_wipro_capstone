@@ -1,37 +1,34 @@
-import subprocess
-import shutil
 import os
-import sys
+import shutil
+from datetime import datetime
+from utils.logger import LogGen
 
+logger = LogGen.loggen()
 
-def run_tests():
-    print("--- Cleaning old reports ---")
-    for folder in ["allure-results", "allure-report"]:
-        if os.path.exists(folder):
-            shutil.rmtree(folder)
-            print(f"Deleted {folder}")
+timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+logger.info("========================================")
+logger.info("AUTOMATION EXECUTION STARTED")
 
-    print("--- Starting Test Execution ---")
-    # This runs the specific tag we defined in the feature file
-    behave_cmd = [
-        "behave",
-        "--tags=@e2e_train",
-        "-f", "allure_behave.formatter:AllureFormatter",
-        "-o", "allure-results"
-    ]
+# Clean Old Allure Results
+if os.path.exists("reports/allure-results"):
+    logger.info("Deleting old allure-results folder")
+    shutil.rmtree("reports/allure-results")
 
-    result = subprocess.run(behave_cmd)
+# Clean Old Allure Report
+if os.path.exists("reports/allure-report"):
+    logger.info("Deleting old allure-report folder")
+    shutil.rmtree("reports/allure-report")
 
-    print("--- Generating Allure Report ---")
-    try:
-        subprocess.run(["allure", "generate", "allure-results", "-o", "allure-report", "--clean"])
-        print("\nSUCCESS: Report generated. Run 'allure serve allure-results' to view it.")
-    except Exception as e:
-        print(f"Failed to generate report: {e}")
-        print("Ensure Allure Commandline is installed.")
+# Execute Behave Tests (targeting e2e for now)
+logger.info("Starting Behave Test Execution")
+behave_status = os.system("behave")
+logger.info(f"Behave Execution Completed with status code : {behave_status}")
 
-    sys.exit(result.returncode)
-
-
-if __name__ == "__main__":
-    run_tests()
+# Generate Allure HTML Report
+logger.info("Generating Allure HTML Report")
+allure_generate_status = os.system(
+    "allure generate reports/allure-results -o reports/allure-report --clean"
+)
+logger.info(f"Allure Report Generated with status code : {allure_generate_status}")
+logger.info("AUTOMATION EXECUTION COMPLETED")
+logger.info("========================================")

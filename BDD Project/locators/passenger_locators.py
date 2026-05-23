@@ -30,6 +30,7 @@ class PassengerLocators:
     PAY_BUTTON = (By.XPATH, "//a[contains(@class, 'paymentBtn') or contains(., 'PAY & BOOK NOW')]")
 
 
+    MOBILE_VALIDATION_ERROR = (By.CSS_SELECTOR, ".inputFieldWrapper.validationError")
     @staticmethod
     def get_dynamic_gender_locator(gender):
         formatted_gender = str(gender).strip().capitalize()

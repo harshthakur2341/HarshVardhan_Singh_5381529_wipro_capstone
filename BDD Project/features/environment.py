@@ -1,74 +1,130 @@
+import time
+import os
 import allure
-import undetected_chromedriver as uc  # upgraded framework import
+
+from seleniumbase import Driver
+
 from utils.logger import LogGen
 from utils.screenshot_utils import ScreenshotUtil
 from utils.config_reader import ConfigReader
 
-# Import Page Objects
+logger = LogGen.loggen()
+
+
+# Import all your page object classes at the top of environment.py
 from pages.home_page import HomePage
 from pages.train_page import TrainPage
 from pages.passenger_page import PassengerPage
 from pages.payment_page import PaymentPage
 
-logger = LogGen.loggen()
-
-
 def before_scenario(context, scenario):
     logger.info(f"========== STARTING SCENARIO: {scenario.name} ==========")
 
-    try:
-        options = uc.ChromeOptions()
-        options.add_argument("--start-maximized")
-        options.add_argument("--disable-notifications")
-
-        # FIX: Force version_main to match your local browser version (148)
-        context.driver = uc.Chrome(options=options, version_main=148)
-        logger.info("STEALTH DRIVER INITIALIZED SUCCESSFULLY WITH CHROME 148 PROFILE")
-
-    except Exception as e:
-        logger.error(f"FAILED TO INITIALIZE DRIVER: {str(e)}")
-        raise Exception("Stealth driver initialization failed")
-
+    # Initialize Driver
+    context.driver = Driver(uc=True)
+    context.driver.maximize_window()
     context.driver.implicitly_wait(ConfigReader.get_implicit_wait())
 
-    # Initialize POM
+    # Open URL
+    base_url = "https://www.makemytrip.com/railways/"
+    context.driver.get(base_url)
+
+    # --- INITIALIZE ALL PAGE OBJECTS ---
     context.home_page = HomePage(context.driver)
     context.train_page = TrainPage(context.driver)
     context.passenger_page = PassengerPage(context.driver)
     context.payment_page = PaymentPage(context.driver)
+    # ------------------------------------
 
-    # Launch Application
-    base_url = ConfigReader.get_base_url()
-    logger.info(f"OPENING WEBSITE: {base_url}")
-    context.driver.get(base_url)
-
+    time.sleep(2)
+    logger.info(f"CURRENT URL: {context.driver.current_url}")
 
 def after_step(context, step):
+
     try:
-        safe_step_name = "".join(c for c in str(step.name) if c.isalnum() or c in (' ', '_', '-')).strip()
-        short_name = safe_step_name[:25].replace(" ", "_")
 
         if step.status == "failed":
-            logger.error(f"STEP FAILED: {step.name}")
-            path = ScreenshotUtil.capture_screenshot(context.driver, f"FAIL_{short_name}")
-            with open(path, "rb") as image_file:
-                allure.attach(image_file.read(), name=f"Failed: {step.name}",
-                              attachment_type=allure.attachment_type.PNG)
+
+            logger.error(
+                f"STEP FAILED: {step.name} - CAPTURING SCREENSHOT"
+            )
+
+            path = ScreenshotUtil.capture_screenshot(
+                context.driver,
+                f"FAIL_{step.name[:20]}"
+            )
+
+            allure.attach.file(
+                path,
+                name=step.name,
+                attachment_type=allure.attachment_type.PNG
+            )
+
+        elif step.status == "passed":
+
+            logger.info(
+                f"STEP PASSED: {step.name} - CAPTURING SCREENSHOT"
+            )
+
+            path = ScreenshotUtil.capture_screenshot(
+                context.driver,
+                f"PASS_{step.name[:20]}"
+            )
+
+            allure.attach.file(
+                path,
+                name=step.name,
+                attachment_type=allure.attachment_type.PNG
+            )
+
     except Exception as e:
-        logger.error(f"SCREENSHOT HOOK FAILED: {str(e)}")
+
+        logger.error(
+            f"SCREENSHOT FAILED: {str(e)}"
+        )
 
 
 def after_scenario(context, scenario):
-    logger.info(f"========== CLOSING SCENARIO: {scenario.name} ==========")
+
+    logger.info(
+        f"========== CLOSING SCENARIO: {scenario.name} =========="
+    )
+
     if hasattr(context, 'driver'):
-        context.driver.quit()
-        logger.info("BROWSER CLOSED SUCCESSFULLY")
+
+        try:
+
+            with open("logs/automation.log", "r") as log_file:
+
+                allure.attach(
+                    log_file.read(),
+                    name="Execution Logs",
+                    attachment_type=allure.attachment_type.TEXT
+                )
+
+            context.driver.quit()
+
+            logger.info(
+                "BROWSER CLOSED SUCCESSFULLY"
+            )
+
+        except Exception as e:
+
+            logger.error(
+                f"ERROR CLOSING BROWSER: {str(e)}"
+            )
 
 
 def after_all(context):
-    if hasattr(context, 'driver') and context.driver:
-        try:
-            context.driver.quit()
-        except OSError:
-            # Silently ignore the OS handle error as the browser is already closed
-            pass
+
+    print(
+        "\n======= TESTS COMPLETED - OPENING ALLURE REPORT ======="
+    )
+
+    os.system(
+        "allure generate reports/allure-results -o reports/allure-report --clean"
+    )
+
+    os.system(
+        "allure open reports/allure-report"
+    )

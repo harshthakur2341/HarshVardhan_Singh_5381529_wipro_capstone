@@ -1,0 +1,8 @@
+"DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
+"","146100","Verify train filters functionality using availability and class filters","","2026-05-23","passed","2026-05-23","","","",""
+"","168135","Verify validation when invalid phone number is entered in passenger details","","2026-05-23","passed","2026-05-23","","","",""
+"","138697","Verify successful navigation to the payment page after passenger detail submission","","2026-05-23","passed","2026-05-23","","","",""
+"","140351","Verify train search functionality using valid source and destination stations","","2026-05-23","passed","2026-05-23","","","",""
+"","71206","Validate application behavior when the same source and destination stations are entered","","2026-05-23","passed","2026-05-23","","","",""
+"","65035","Validate that the train listing page displays available trains after successful search","","2026-05-23","passed","2026-05-23","","","",""
+"","177102","Successfully search, select, and enter payment details for a train ticket","","2026-05-23","passed","2026-05-23","","","",""

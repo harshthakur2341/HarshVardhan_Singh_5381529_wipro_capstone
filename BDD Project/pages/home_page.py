@@ -1,6 +1,7 @@
 import time
-from selenium.webdriver.common.keys import Keys
-from selenium.webdriver.common.by import By
+
+from selenium.common import TimeoutException
+
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from pages.base_page import BasePage
@@ -140,3 +141,15 @@ class HomePage(BasePage):
         except Exception as e:
             logger.error(f"POM LOG: CRITICAL ORCHESTRATION PIPELINE ABORTED INSIDE search_train | Exception: {str(e)}")
             raise
+
+
+    # Add this to your HomePage class
+    def get_same_station_error_text(self):
+        try:
+            # Wait a few seconds for the error to appear
+            error_element = self.wait.until(
+                EC.visibility_of_element_located(HomeLocators.SAME_STATION_ERROR)
+            )
+            return error_element.text
+        except TimeoutException:
+            return None

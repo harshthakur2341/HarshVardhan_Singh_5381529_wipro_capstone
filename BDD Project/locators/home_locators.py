@@ -13,5 +13,7 @@ class HomeLocators:
     ALL_CLASS = (By.XPATH, "//li[@data-cy='ALL']")
     SEARCH_BTN = (By.XPATH, "//a[contains(text(),'Search')]")
 
+    SAME_STATION_ERROR = (By.ID, "errorMessage")
+
     FROM_FIELD = (By.XPATH, "//label[@for='fromCity']")
     TO_FIELD = (By.XPATH, "//label[@for='toCity']")

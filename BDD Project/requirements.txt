@@ -7,4 +7,5 @@ pytest
 openpyxl
 configparser
 gherkin-official
-#allure
+allure
+allure-python-commons
